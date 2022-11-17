@@ -1,0 +1,9 @@
+export { default as all_orders } from "./all_orders.png";
+export { default as all_payments } from "./all_payment.png";
+export { default as manual } from "./manual.png";
+export { default as overview } from "./overview.png";
+export { default as pending_orders } from "./pending_orders.png";
+export { default as reconciled_orders } from "./re_orders.png";
+export { default as reconciled_payments } from "./re_payment.png";
+export { default as unreconciled_payments } from "./un_payment.png";
+export { default as profile } from "./profile.png";
