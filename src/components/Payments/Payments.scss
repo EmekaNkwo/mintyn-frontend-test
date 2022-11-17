@@ -1,0 +1,120 @@
+.payments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  .payment_header {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  .table_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .entries {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      select {
+        border: none;
+        color: #1875f0;
+        outline: none;
+        background-color: transparent;
+        font-size: 1rem;
+        option {
+          padding: 1rem;
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      padding: 0.5rem;
+      border-bottom: 1px solid #787878;
+      input {
+        width: 400px;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        background-color: transparent;
+
+        &::placeholder {
+          font-size: 1.1rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    .filter {
+      .selection {
+        outline: none;
+      }
+    }
+  }
+
+  .table_data {
+    margin-top: 1rem;
+    table {
+      border-collapse: collapse;
+      border: 1px solid #213f7d0f;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      background-color: #fff;
+      color: #4f4f4f;
+      overflow-x: auto;
+      width: 100%;
+      border-radius: 4px;
+
+      thead {
+        font-size: 14px;
+        background-color: #eaeef0;
+        th {
+          padding: 1rem 0.6rem;
+          font-size: 0.8rem;
+          text-align: left;
+        }
+      }
+
+      tbody {
+        font-size: 0.8rem;
+        tr {
+          td {
+            .table_avatar {
+              padding: 0.5rem;
+              background-color: #4f4f4f;
+              margin-right: 1rem;
+              border-radius: 50%;
+              color: #fff;
+            }
+
+            .action {
+              cursor: pointer;
+              font-weight: bold;
+              font-size: 1.2rem;
+            }
+            span {
+              border-radius: 8px;
+              border: 1px solid #4f4f4f;
+              padding: 0.5rem 1rem;
+            }
+            .pending {
+              color: #f5a623;
+            }
+            .reconciled {
+              color: #27ae60;
+            }
+
+            border: 1px solid #4f4f4f14;
+            padding: 1rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
