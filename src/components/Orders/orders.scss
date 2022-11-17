@@ -1,0 +1,102 @@
+.orders {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+
+  .today_orders {
+    padding: 1rem;
+
+    flex: 3;
+    background-color: #fff;
+    .order_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .order_title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #4f4f4f;
+      }
+      .order_controls {
+        display: flex;
+        gap: 1rem;
+        select {
+          padding: 0.5rem;
+          border: 1px solid #e0e0e0;
+          border-radius: 5px;
+          outline: none;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: #4f4f4f;
+        }
+
+        .order_buttons {
+          display: flex;
+          gap: 0.5rem;
+          button {
+            padding: 0.4rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #4f4f4f;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .order_table {
+      margin-top: 0.3rem;
+    }
+  }
+  .data_right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .values {
+      padding: 1.5rem;
+      background-color: #fff;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+
+      .value_title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #4f4f4f;
+      }
+
+      progress {
+        width: 100%;
+        height: 4px;
+        border-radius: 8px;
+        background-color: #27ae60;
+      }
+      progress::-webkit-progress-value {
+        background-color: #27ae60;
+        border-radius: 4px;
+      }
+      progress::-webkit-progress-bar {
+        background-color: #fdc203;
+        border-radius: 4px;
+      }
+
+      span {
+        .pending_value {
+          color: #fdc203;
+        }
+        .reconciled_value {
+          color: #27ae60;
+        }
+        .total_value {
+          color: #1860ec;
+        }
+      }
+    }
+  }
+}

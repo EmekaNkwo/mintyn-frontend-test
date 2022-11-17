@@ -1,0 +1,33 @@
+.widget {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  @media only screen and (min-width: 1028px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .widget_item {
+    background-color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-between;
+    .widget_desc {
+      display: flex;
+      flex-direction: column;
+      color: #4f4f4f;
+
+      .widget_value {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #4f4f4f;
+      }
+    }
+  }
+}
