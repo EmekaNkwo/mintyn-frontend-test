@@ -10,7 +10,7 @@ const Sidebar = () => {
       <div className="sidebar_links">
         {sideBarLinks.map((item) => (
           <div key={item.title} className="links_item">
-            <p className="">{item.title}</p>
+            <p className="menu_title">{item.title}</p>
             {item.links.map((link) => (
               <a href={link.link} key={link.name} className="side_link">
                 <img src={link.icon} alt={link.name} />
