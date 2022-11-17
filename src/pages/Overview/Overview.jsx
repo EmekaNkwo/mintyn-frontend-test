@@ -1,4 +1,4 @@
-import { Orders, Widget } from "../../components";
+import { Orders, Payments, Widget } from "../../components";
 import "./overview.scss";
 
 const Overview = () => {
@@ -6,6 +6,7 @@ const Overview = () => {
     <div className="overview_container">
       <Widget />
       <Orders />
+      <Payments />
     </div>
   );
 };
