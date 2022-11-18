@@ -16,6 +16,7 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      color: #262626;
 
       select {
         border: none;
@@ -37,23 +38,31 @@
       padding: 0.5rem;
       border-bottom: 1px solid #787878;
       input {
-        width: 400px;
+        width: 350px;
         border: none;
         outline: none;
-        font-size: 1.1rem;
-        letter-spacing: 2px;
+        font-size: 1rem;
+        letter-spacing: 1px;
         background-color: transparent;
-
+        color: #262626;
         &::placeholder {
           font-size: 1.1rem;
           letter-spacing: 2px;
+          color: #2626268e;
         }
       }
     }
 
     .filter {
       .selection {
+        width: 200px;
+        padding: 0.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
         outline: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #4f4f4f;
       }
     }
   }
@@ -112,6 +121,42 @@
 
             border: 1px solid #4f4f4f14;
             padding: 1rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .table_footer {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer_left {
+      color: #000;
+    }
+
+    .footer_right {
+      .pagination {
+        ul {
+          display: flex;
+          list-style: none;
+
+          li {
+            padding: 0.3rem;
+            background: transparent;
+            border: 1px solid #ced0da;
+            a {
+              text-decoration: none;
+              color: #213f7d;
+            }
+          }
+          li.active {
+            background-color: #1875f0;
+            a {
+              color: #fff;
+            }
           }
         }
       }

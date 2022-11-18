@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { GoPrimitiveDot } from "react-icons/go";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -6,6 +6,26 @@ import { tableData } from "../../data/dummy";
 import "./Payments.scss";
 
 const Payments = () => {
+  const count = 8;
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const indexOfLastPage = currentPage * count;
+  const indexOfFirstPage = indexOfLastPage - count;
+  const page = tableData?.slice(indexOfFirstPage, indexOfLastPage);
+
+  const nPages = Math.ceil(tableData?.length / count);
+  const pageNumbers = [];
+  for (let i = 1; i <= nPages; i++) {
+    pageNumbers.push(i);
+  }
+
+  const nextPage = () => {
+    if (currentPage !== nPages) setCurrentPage(currentPage + 1);
+  };
+  const prevPage = () => {
+    if (currentPage !== 1) setCurrentPage(currentPage - 1);
+  };
   return (
     <div className="payments">
       <span className="payment_header">Payments</span>
@@ -22,7 +42,7 @@ const Payments = () => {
           </div>
           <div className="search">
             <BiSearch />
-            <input type="text" placeholder="search" />
+            <input type="text" placeholder="Search Payments" />
           </div>
 
           <div className="filter">
@@ -50,7 +70,7 @@ const Payments = () => {
               </tr>
             </thead>
             <tbody>
-              {tableData.map((item, index) => {
+              {page.map((item, index) => {
                 return (
                   <tr key={index}>
                     <td>
@@ -99,6 +119,37 @@ const Payments = () => {
               })}
             </tbody>
           </table>
+
+          <div className="table_footer">
+            <div className="footer_left">
+              <span>Showing</span> <b>{currentPage}</b> <span>to</span>{" "}
+              <b>{count}</b> <span>of</span> <b>{page?.length}</b>{" "}
+            </div>
+            <div className="footer_right">
+              <div className="pagination">
+                <ul>
+                  <li className="paginate" onClick={prevPage}>
+                    <a href="#!">Previous</a>
+                  </li>
+                  {pageNumbers.map((number) => (
+                    <li
+                      key={number}
+                      className={`paginate ${
+                        currentPage === number ? "active" : ""
+                      }`}
+                    >
+                      <a onClick={() => setCurrentPage(number)} href="#!">
+                        <b> {number}</b>
+                      </a>
+                    </li>
+                  ))}
+                  <li className="paginate" onClick={nextPage}>
+                    <a href="#!">Next</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
