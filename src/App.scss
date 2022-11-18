@@ -11,9 +11,16 @@
 
 .app {
   width: 100%;
-  background-color: #e5e5e5;
+  background-color: #f7f7f7;
   .container {
     display: flex;
-    gap: 2rem;
+
+    .main {
+      margin-top: 4%;
+      margin-left: 18%;
+
+      width: 100%;
+      padding: 1rem;
+    }
   }
 }
