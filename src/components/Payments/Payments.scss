@@ -69,6 +69,7 @@
 
   .table_data {
     margin-top: 1rem;
+
     table {
       border-collapse: collapse;
       border: 1px solid #213f7d0f;
@@ -76,9 +77,13 @@
       font-size: 0.8rem;
       background-color: #fff;
       color: #4f4f4f;
-      overflow-x: auto;
+
       width: 100%;
       border-radius: 4px;
+
+      @media only screen and (max-width: 768px) {
+        overflow-x: scroll;
+      }
 
       thead {
         font-size: 14px;

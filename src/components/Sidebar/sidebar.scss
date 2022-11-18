@@ -10,6 +10,10 @@
   z-index: 10;
 
   flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    top: 7%;
+  }
   .generate {
     background-color: #27ae60;
     padding: 1rem;
