@@ -9,7 +9,6 @@ This is a Dashboard application that displays an overview of orders, payments an
 - Created atomic reusable components like widget, charts, and tables, etc
 - Used SCSS for styling of the different components
 - Implemented Data visualization using Rechartjs
-- Used React Hooks for state management
 
 ## Features
 
