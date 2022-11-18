@@ -7,3 +7,4 @@ export { default as reconciled_orders } from "./re_orders.png";
 export { default as reconciled_payments } from "./re_payment.png";
 export { default as unreconciled_payments } from "./un_payment.png";
 export { default as profile } from "./profile.png";
+export { default as avatar } from "./avatar.png";
