@@ -5,17 +5,19 @@ import { Overview } from "./pages";
 
 function App() {
   return (
-    <div className="app">
-      <Topbar />
-      <div className="container">
-        <Sidebar />
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Overview />} />
-          </Routes>
-        </BrowserRouter>
+    <>
+      <div className="app">
+        <Topbar />
+        <div className="container">
+          <Sidebar />
+          <div className="main">
+            <Routes>
+              <Route index element={<Overview />} />
+            </Routes>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
