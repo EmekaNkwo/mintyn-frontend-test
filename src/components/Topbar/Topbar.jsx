@@ -1,5 +1,6 @@
 import { BiSearch } from "react-icons/bi";
 import { MdNotifications } from "react-icons/md";
+import { avatar } from "../../data/images";
 import "./topbar.scss";
 const Topbar = () => {
   return (
@@ -24,7 +25,7 @@ const Topbar = () => {
             <span>Oluwaleke Ojo</span>
           </div>
           <div className="profile_img">
-            <img src="" alt="" className="avatar" />
+            <img src={avatar} alt="" className="avatar" />
           </div>
         </div>
       </div>

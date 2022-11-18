@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { sideBarLinks } from "../../data/dummy";
 import "./sidebar.scss";
 
@@ -12,10 +13,16 @@ const Sidebar = () => {
           <div key={item.title} className="links_item">
             <p className="menu_title">{item.title}</p>
             {item.links.map((link) => (
-              <a href={link.link} key={link.name} className="side_link">
+              <NavLink
+                to={`/${link.link}`}
+                key={link.name}
+                className={({ isActive }) =>
+                  isActive ? "active_link" : "side_link"
+                }
+              >
                 <img src={link.icon} alt={link.name} />
                 <span className="">{link.name}</span>
-              </a>
+              </NavLink>
             ))}
           </div>
         ))}

@@ -1,9 +1,13 @@
 .sidebar {
   width: 300px;
   background: #fff;
-  padding: 1.5rem;
-  height: 100vh;
+
+  height: 100%;
   display: flex;
+  position: fixed;
+  top: 6%;
+  padding: 1rem;
+  z-index: 10;
 
   flex-direction: column;
   .generate {
@@ -20,6 +24,7 @@
   .sidebar_links {
     color: #647787;
     margin-top: 1rem;
+
     .links_item {
       display: flex;
       flex-direction: column;
@@ -31,6 +36,21 @@
         text-decoration: none;
         color: #647787;
         font-weight: 500;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .active_link {
+        display: flex;
+        gap: 0.5rem;
+        text-decoration: none;
+        border-left: 2px solid #1875f0;
+        background-color: #1876f013;
+        color: #647787;
+        font-weight: 500;
+        padding: 1rem;
 
         img {
           width: 20px;
