@@ -16,7 +16,7 @@ export const sideBarLinks = [
     links: [
       {
         name: "Overview",
-        link: "/",
+        link: "#!",
         icon: overview,
       },
     ],
@@ -27,22 +27,22 @@ export const sideBarLinks = [
     links: [
       {
         name: "All Payments",
-        link: "#!",
+        link: "/",
         icon: all_payments,
       },
       {
         name: "Reconcilied Payments",
-        link: "#!",
+        link: "/",
         icon: reconciled_payments,
       },
       {
         name: "Un-Reconcilied Payments",
-        link: "#!",
+        link: "/",
         icon: unreconciled_payments,
       },
       {
         name: "Manual Settlement",
-        link: "#!",
+        link: "/",
         icon: manual,
       },
     ],
@@ -52,22 +52,22 @@ export const sideBarLinks = [
     links: [
       {
         name: "All Orders",
-        link: "#!",
+        link: "/",
         icon: all_orders,
       },
       {
         name: "Pending Orders",
-        link: "#!",
+        link: "/",
         icon: pending_orders,
       },
       {
         name: "Reconciled Orders",
-        link: "#!",
+        link: "/",
         icon: reconciled_orders,
       },
       {
         name: "Merchant Profile",
-        link: "#!",
+        link: "/",
         icon: profile,
       },
     ],
@@ -140,46 +140,40 @@ export const widgetChart = [
 
 export const orderData = [
   {
-    name: "Page A",
-    uv: 4000,
+    name: "Jan",
+    uv: 2000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "Page B",
+    name: "Feb",
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: "Page C",
+    name: "Mar",
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "Page D",
-    uv: 2780,
+    name: "Apr",
+    uv: 2080,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
+    name: "May",
+    uv: 2890,
     pv: 4800,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
+    name: "Jun",
+    uv: 5090,
     pv: 3800,
     amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
   },
 ];
 
