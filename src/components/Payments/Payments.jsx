@@ -6,7 +6,7 @@ import { tableData } from "../../data/dummy";
 import "./Payments.scss";
 
 const Payments = () => {
-  const count = 8;
+  const count = 10;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -26,6 +26,7 @@ const Payments = () => {
   const prevPage = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
   };
+
   return (
     <div className="payments">
       <span className="payment_header">Payments</span>
